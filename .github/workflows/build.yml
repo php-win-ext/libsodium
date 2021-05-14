@@ -10,5 +10,5 @@ jobs:
       - run: tree /f /a $Env:GITHUB_WORKSPACE\winlibs
       - uses: actions/upload-artifact@v2
         with:
-          name: libsodium-test-vs16-x64.zip
+          name: libsodium-test-vs16-x64
           path: ./winlibs/
