@@ -10,4 +10,4 @@ rmdir /s /q winlibs\include\sodium\private
 del winlibs\include\sodium\randombytes_nativeclient.h
 xcopy bin\x64\Release\v142\dynamic\libsodium.lib winlibs\lib\*
 copy bin\x64\Release\v142\static\libsodium.lib winlibs\lib\libsodium_a.lib
-Compress-Archive -Path winlibs\* -DestinationPath winlibs\libsodium-test-vs16-x64.zip
+# Compress-Archive -Path winlibs\* -DestinationPath winlibs\libsodium-test-vs16-x64.zip
