@@ -6,4 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/setup-msbuild@v1.0.2
-      - run: msbuild /?
+      - run: |
+          cd  builds\msvc\vs2019
+          msbuild /t:Build /p:Configuration=StaticRelease /p:Platform=x64 libsodium.sln
+
