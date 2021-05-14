@@ -20,5 +20,5 @@ jobs:
       - run: powershell ./.github/workflows/build.ps1 ${{matrix.architecture}} ${{matrix.vs}}
       - uses: actions/upload-artifact@v2
         with:
-          name: libsodium-test-${{matrix.vs}}-${{matrix.architecture}}
+          name: libsodium-${{github.sha}}-${{matrix.vs}}-${{matrix.architecture}}
           path: ./winlibs/
