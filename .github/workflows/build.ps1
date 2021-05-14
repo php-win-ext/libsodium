@@ -1,4 +1,6 @@
-param ([Parameter(Mandatory)] $architecture)
+param (
+    [Parameter(Mandatory)] $architecture
+)
 
 $ErrorActionPreference = "Stop"
 

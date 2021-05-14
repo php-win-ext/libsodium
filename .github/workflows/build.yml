@@ -1,21 +1,16 @@
 name: build
 on: [push]
 jobs:
-  # build:
-  #   runs-on: windows-latest
-  #   strategy:
-  #     matrix:
-  #         architecture: [x64, x86]
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: microsoft/setup-msbuild@v1.0.2
-  #     - run: powershell ./.github/workflows/build.ps1 ${{matrix.architecture}}
-  #     - uses: actions/upload-artifact@v2
-  #       with:
-  #         name: libsodium-test-vs16-${{matrix.architecture}}
-  #         path: ./winlibs/
-  peek:
+  build:
     runs-on: windows-2019
+    strategy:
+      matrix:
+          architecture: [x64, x86]
     steps:
-      - run: php -v
-      - run: php -i
+      - uses: actions/checkout@v2
+      - uses: microsoft/setup-msbuild@v1.0.2
+      - run: powershell ./.github/workflows/build.ps1 ${{matrix.architecture}}
+      - uses: actions/upload-artifact@v2
+        with:
+          name: libsodium-test-vs16-${{matrix.architecture}}
+          path: ./winlibs/
