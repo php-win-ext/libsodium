@@ -6,5 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/setup-msbuild@v1.0.2
-      - run: ./build.ps1
-        shell: pwsh
+      - run: powershell ./.github/workflows/build.ps1
