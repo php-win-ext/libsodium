@@ -7,4 +7,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: microsoft/setup-msbuild@v1.0.2
       - run: powershell ./.github/workflows/build.ps1
-      - run: dir $Env:GITHUB_WORKSPACE\..
+      - run: tree /f $Env:GITHUB_WORKSPACE\winlibs
